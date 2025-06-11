@@ -5,6 +5,7 @@
 >
   <head>
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'app.css' |  asset_url | stylesheet_tag }}
 
     {%- if settings.favicon != blank -%}
       <link
@@ -63,5 +64,7 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+
+    {{ 'app.js' | asset_url | script_tag }}
   </body>
 </html>

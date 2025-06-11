@@ -22,7 +22,7 @@ module.exports = {
 
   output: {
     filename: '[name].js.liquid',
-    path: path.join(__dirname, 'views/assets'),
+    path: path.join(__dirname, '/assets'),
   },
 
   module: {
