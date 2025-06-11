@@ -1,0 +1,6 @@
+node_modules
+.env
+variables
+views/.DS_Store
+.codegpt
+.shopify

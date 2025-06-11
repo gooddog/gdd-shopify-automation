@@ -1,0 +1,75 @@
+@import './core/vars/colors.scss';
+@import './core/vars/text.scss';
+
+// --- Breakpoints --- //
+$xsmall: 340px;
+$msmall: 365px;
+$small: 620px;
+$medium: 1080px;
+$large: 1280px;
+$xlarge: 1440px;
+
+// --- Other --- //
+$headerHeightMobile: 60px;
+$headerHeightDesktop: 87px;
+$headerBannerHeight: 27px;
+
+$buttonHeightMobile: 60px;
+$buttonHeightDesktop: 90px;
+$desktopGutter: 50px;
+$desktopGutterLarge: 133px;
+$mobileGutter: 30px;
+
+$small-layout: 680px;
+$medium-layout: 1180px;
+
+/* These are added to the document.body's style object.
+   They are used in the JavaScript. See the utils/helpers.js file */
+:root {
+  --xsmall:#{$xsmall};
+  --msmall:#{$msmall};
+  --small:#{$small};
+  --medium:#{$medium};
+  --large:#{$large};
+  --xlarge:#{$xlarge};
+  --headerHeightMobile:#{$headerHeightMobile};
+  --headerHeightDesktop:#{$headerHeightDesktop};
+  --buttonHeightDesktop:#{$buttonHeightDesktop};
+  --mobileGutter:#{$mobileGutter};
+}
+
+/**
+ * Easing
+ */
+$ease-1: ease-in-out;
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+/**
+ * Timers
+ */
+$fastest-timer:100ms;
+$fast-timer: 200ms;
+$faster-timer: 300ms;
+$normal-timer: 400ms;
+$medium-timer: 500ms;
+$slow-timer: 600ms;
+$slowest-timer: 800ms;
+
+$z: (
+  base: 0,
+  navigation: 5,
+  header: 10,
+  sticky_nav: 11,
+  header_overlay: 9,
+  navigation_tout: 7,
+  forward: 2,
+  front: 1,
+  behind: -2,
+  loading: 5,
+  filter: 5,
+  product_content: 7,
+  size_chart: 6,
+  size_guide_desktop: 7,
+  size_guide_mobile: 5
+);

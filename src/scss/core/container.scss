@@ -1,0 +1,87 @@
+/*
+ * Container
+ */
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  overflow: hidden;
+  padding: 0 rem(30);
+
+  @include respond($small) {
+    max-width: rem(1280);
+    padding: 0 rem(15);
+  }
+
+  @include respond($medium) {
+    max-width: rem(1200);
+    padding: 0 rem(20);
+  }
+
+  @include respond($large) {
+    max-width: rem(1240);
+  }
+
+  @include respond($xlarge) {
+    max-width: rem(1400);
+  }
+
+  // .container--medium
+  &--medium {
+
+    @include respond-below($small) {
+      padding: 0 rem(20);
+    }
+
+    @include respond($small) {
+      padding: 0 rem(51);
+    }
+
+    @include respond($medium) {
+      max-width: rem(1246);
+      padding: 0 rem(97);
+    }
+  }
+
+  // .container--small
+  &--small {
+    padding: 0 rem(10);
+
+    @include respond($small) {
+      padding: 0 rem(48);
+    }
+
+    @include respond($medium) {
+      max-width: rem(1260);
+      padding: 0 rem(90);
+    }
+  }
+
+  // .container--smaller
+  &--smaller {
+    padding: rem(30);
+
+    @include respond($small) {
+      padding: 0 rem(72);
+    }
+
+    @include respond($medium) {
+      max-width: rem(1170);
+      padding: 0 rem(135);
+    }
+  }
+
+  // .container--smallest
+  &--smallest {
+
+    @include respond($small) {
+      padding: 0 rem(86);
+    }
+
+    @include respond($medium) {
+      max-width: rem(1116);
+      padding: 0 rem(162);
+    }
+  }
+}

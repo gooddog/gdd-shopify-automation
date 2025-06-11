@@ -1,0 +1,166 @@
+/**
+ * Text formatting
+ */
+//  body {
+//   -moz-osx-font-smoothing: grayscale;
+//   -webkit-font-smoothing: antialiased;
+//   background: $backgroundOffWhite-2;
+//   color: $black-2;
+//   font-family: $primary-font;
+//   font-weight: $regular;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p {
+//   transition: font-size $normal-timer $ease-1;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   // color: $brown-1;
+//   font-family: $primary-font;
+//   font-weight: $regular;
+//   letter-spacing: 0;
+//   margin: 0;
+//   padding: 0;
+//   text-transform: uppercase;
+// }
+
+// h1 {
+//   font-size: rem(50);
+//   letter-spacing: rem(1);
+//   margin-bottom: rem(15);
+
+//   @include respond($small) {
+//     font-size: rem(54);
+//   }
+
+//   @include respond($medium) {
+//     font-size: rem(60);
+//   }
+
+//   @include respond($large) {
+//     font-size: rem(70);
+//   }
+
+//   @include respond($xlarge) {
+//     font-size: rem(80);
+//     letter-spacing: rem(2);
+//   }
+// }
+
+// h2 {
+//   font-size: rem(23);
+//   font-weight: $medium-weight;
+//   letter-spacing: rem(1);
+//   margin-bottom: rem(10);
+
+//   @include respond($small) {
+//     font-size: rem(30);
+//   }
+
+//   @include respond($medium) {
+//     font-size: rem(34);
+//   }
+
+//   @include respond($large) {
+//     font-size: rem(40);
+//   }
+
+//   @include respond($xlarge) {
+//     font-size: rem(46);
+//     letter-spacing: rem(2);
+//   }
+// }
+
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-size: rem(16);
+
+//   @include respond($small) {
+//     font-size: rem(30);
+//   }
+// }
+
+// address,
+// p {
+//   font-family: $primary-font;
+//   font-size: rem(16);
+//   font-style: normal;
+//   font-weight: $regular;
+//   line-height: rem(24);
+//   margin: 0 0 rem(24) 0;
+// }
+
+// a {
+//   color: $black-2;
+//   cursor: pointer;
+//   text-decoration: none;
+
+//   // a:hover
+//   &:hover {
+//     font-weight: $medium-weight;
+//   }
+// }
+
+// small {
+//   font-size: 85%;
+// }
+
+// strong {
+//   font-weight: $semibold;
+// }
+
+// em {
+//   font-style: italic;
+// }
+
+// dl,
+// ol,
+// ul {
+//   font-size: rem(16);
+//   margin: 0 0 rem(30);
+//   padding: 0 0 0 rem(35);
+// }
+
+// ol li,
+// ul li {
+//   padding: 0 0 rem(15);
+
+//   &:last-child {
+//     padding-bottom: 0;
+//   }
+// }
+
+// ol ol,
+// ul ul {
+//   font-size: 1em;
+//   margin: 0;
+//   padding: rem(15) 0 0 rem(35);
+// }
+
+dt {
+  font-weight: $semibold;
+}
+
+// dd {
+//   margin: 0 0 rem(15);
+// }
+
+.product__grid__title{
+  font-family: $secondary-font;
+  font-weight: 600;
+  font-size: rem(16);
+  text-transform: initial !important;
+}

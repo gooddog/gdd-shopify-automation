@@ -1,0 +1,378 @@
+.body1,
+.p1 {
+  color: $gray-1;
+  font-family: $primary-font;
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0;
+  line-height: rem(24);
+}
+
+.body2 {
+  font-size: 12px;
+  line-height: 16px
+}
+
+.body3 {
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: $secondary-font;
+}
+
+.header7 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+h1, .h1 {
+  font-family: $primary-font;
+  font-weight: 500;
+}
+
+h2, .h2 {
+  font-family: $primary-font;
+  font-weight: 500;
+}
+
+h3, .h3 {
+}
+
+h4, .h4 {
+}
+
+h5, .h5 {
+}
+
+h6, .h6 {
+}
+
+.h1--body {
+}
+
+.h2--body {
+}
+
+.h3--body {
+}
+
+.h4--body {
+}
+
+.h5--body {
+}
+
+.h6--body {
+}
+
+ul li, p, .p {
+  font-family: var(--FONT-STACK-BODY);
+}
+
+small, .small, p small {
+}
+
+.xs {
+}
+
+.xxs {
+}
+
+.font-canela-web{
+  font-family: $primary-font !important;
+  a,p,li{
+    font-family: $primary-font !important;
+  }
+}
+
+.font-style-italic {
+  font-style: italic;
+}
+
+.font-graphik-web{
+  font-family: $secondary-font !important;
+  a,p,li{
+    font-family: $secondary-font !important;
+  }
+}
+
+.font-bonnycastle{
+  font-family: $tertiary-font !important;
+  a,p,li{
+    font-family: $tertiary-font !important;
+  }
+}
+
+.font-trixie{
+  font-family: $quaternary-font !important;
+  a,p,li{
+    font-family: $quaternary-font !important;
+  }
+}
+
+.font-montserrat{
+  font-family: $secondary-font !important;
+  a,p,li{
+    font-family: $secondary-font !important;
+  }
+}
+
+.caps-true{
+  p{
+    text-transform: uppercase;
+  }
+}
+
+.item__fabric {
+  text-transform: capitalize;
+  display: block;
+  font-family: $secondary-font;
+
+  &.subtitle{
+    text-transform: uppercase;
+  }
+}
+
+.body-size-1 {
+  
+}
+
+.body-size-2 {
+  
+}
+
+.body-size-3 {
+  
+}
+
+.body-size-4 {
+  
+}
+
+.body-size-5 {
+  
+}
+
+.body-size-6 {
+  
+}
+
+.body-size-7 {
+  
+}
+
+.body-size-8 {
+  
+}
+
+.body-size-9 {
+  
+}
+
+.body-size-10 {
+  
+}
+
+.body-size-11 {
+  padding: 16px;
+  margin-bottom: 49px;
+}
+
+.body-size-12 {
+  padding: 16px;
+  margin-bottom: 49px;
+}
+
+.body-size-13 {
+  padding: 16px;
+  margin-bottom: 49px;
+}
+
+.body-size-14 {
+  padding: 16px;
+  margin-bottom: 49px;
+}
+
+.body-size-15 {
+  padding: 16px;
+  margin-bottom: 49px;
+}
+
+.accent-size-1 {
+  
+}
+
+.accent-size-2 {
+  
+}
+
+.accent-size-3 {
+  
+}
+
+.accent-size-4 {
+  
+}
+
+.accent-size-5 {
+  
+}
+
+.accent-size-6 {
+  
+}
+
+.accent-size-7 {
+  
+}
+
+.accent-size-8 {
+  
+}
+
+.accent-size-9 {
+  
+}
+
+.accent-size-10 {
+  
+}
+
+.accent-size-11 {
+  
+}
+
+.accent-size-12 {
+  
+}
+
+.accent-size-13 {
+  
+}
+
+.accent-size-14 {
+  
+}
+
+.accent-size-15 {
+  
+}
+
+.heading-size-1 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-2 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-3 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-4 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-5 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-6 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-7 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-8 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-9 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-10 {
+  line-height: 120%;
+  a,p,li{
+    line-height: 120%;
+  }
+}
+
+.heading-size-11 {
+  line-height: 110%;
+  a,p,li{
+    line-height: 110%;
+    padding: 8px 16px;
+  }
+}
+
+.heading-size-12 {
+  line-height: 100%;
+  a,p,li{
+    line-height: 100%;
+    padding: 8px 16px;
+  }
+}
+
+.heading-size-13 {
+  line-height: 100%;
+  a,p,li{
+    line-height: 125%;
+    padding: 8px 16px;
+  }
+}
+
+.heading-size-14 {
+  line-height: 100%;
+  a,p,li{
+    line-height: 100%;
+    padding: 8px 16px;
+  }
+}
+
+.heading-size-15 {
+  line-height: 100%;
+  a,p,li{
+    line-height: 100%;
+    padding: 8px 16px;
+  }
+}
+
+ul{
+  margin-bottom: 30px;
+
+  li{
+    margin-bottom: 10px;
+  }
+}

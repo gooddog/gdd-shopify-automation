@@ -1,0 +1,13 @@
+// Font Family
+$primary-font: 'Canela Web', serif;
+$secondary-font: 'Montserrat', sans-serif; 
+$tertiary-font: 'Bonnycastle W01 Regular', serif;
+$quaternary-font: 'Trixie Regular', serif;
+
+// Font Weights
+$light: 300;
+$regular: 400;
+$medium-weight: 500; // $medium taken by breakpoint in 'variables.scss'
+$semibold: 600;
+
+$header-text-size: calc(12px * var(--FONT-ADJUST-NAV));

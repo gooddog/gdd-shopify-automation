@@ -1,0 +1,35 @@
+# Live Staging Theme
+development:
+  password: ${DEV_PASSWD}
+  theme_id: ${DEV_THEMEID}
+  store: ${DEV_SHOP}
+  directory: views
+  ignore_files:
+    - config/settings_data.json
+    - .env
+    - templates/*
+    - locales/*
+
+# Development environment
+dev:
+  password: ${TEST_PASSWD}
+  theme_id: ${TEST_THEMEID}
+  store: ${TEST_SHOP}
+  directory: views
+  ignore_files:
+    - config/settings_data.json
+    - .env
+    - templates/*
+    - locales/*
+
+# Production environment
+production:
+  password: ${PROD_PASSWD}
+  theme_id: ${PROD_THEMEID}
+  store: ${PROD_SHOP}
+  # directory: views
+  ignore_files:
+    - config/settings_data.json
+    - .env
+    - templates/*
+    - locales/*

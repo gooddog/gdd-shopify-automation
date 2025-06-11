@@ -1,0 +1,11 @@
+@include respond($small) {
+  .phone-only {
+    display: none !important;
+  }
+}
+
+@include respond-below(620px) {
+  .desktop-only {
+    display: none !important;
+  }
+}

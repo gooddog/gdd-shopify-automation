@@ -1,0 +1,94 @@
+/**
+ * Colors
+ */
+
+// Black
+$black: #000;
+$black-2: #241b17;
+$black-3: #231f20;
+$black-4: #2c260b;
+$black-5: #272626;
+$black-6: #241b17;
+$black-7: #2b260f;
+$black-8: #010101;
+$black-9: #212121;
+$black-10: #130E0C;
+$black-11: #424242;
+
+// White
+$white: #fff;
+$backgroundOffWhite: #FFFCF9;
+$backgroundOffWhite-2: #f7f6ef;
+$backgroundOffWhite-3: #fcfbf8;
+$backgroundOffWhite-4: #f1f1e9;
+$backgroundOffWhite-5: #fcfcf9;
+$backgroundOffWhite-6: #e7e6df;
+$backgroundOffWhite-7: #f7f3f0;
+$backgroundOffWhite-8: #f7f7ef;
+$backgroundOffWhite-9: #fcfbf7;
+$backgroundOffWhite-10: #fcfbf8;
+
+// Transparent
+$transparent: rgba(0, 0, 0, 0);
+
+// Green
+$green-1: #008827;
+$green-2: #e2ffef; // message background
+$green-3: #747167;
+$green-light: #6f815b;
+$green-light-2: #AFC188;
+$green-light-3: #6A7A57;
+$green-dark: #323f2b;
+$green-dark-2: #6f815b; // footer background
+
+// Red
+$red-1: #dc0000;
+$red-2: #b52929; // error msg color
+$red-3: #fbe8e8; // message background
+$red-4: #963022;
+$red-5: #d2815f;
+
+// Gray
+$gray-1: #4d4d4d;
+$gray-2: #f7f7f7;
+$gray-3: #979797;
+$gray-4: #959595;
+$gray-5: #ececec;
+$gray-6: #7c7674;
+$gray-7: #68696E;
+$gray-8: #ADADA9;
+$gray-9: #d8d8d8;
+$gray-10: #a7a9ab;
+$gray-11: #4c4c4c;
+$gray-12: #7f7f7f;
+$gray-13: #a8a59d;
+$gray-14: #f1f1e9;
+$gray-15: #7c7771;
+$gray-16: #bbbbbb;
+$gray-17: #747167;
+$gray-18: #707070;
+$gray-19: #8C8C8C;
+$gray-20: #bbbbbb;
+
+// Brown
+$brown-1: #241b17;
+
+
+// Blue
+$blue-1: #3399cc;
+$blue-2: #243451;
+$blue-3: #6b8ac2;
+
+// borders with opacity
+$faintGrayBorder: 1px solid rgba($gray-8, 0.16);
+$faintGrayBorder-2: 1px solid rgba($gray-3, 0.3);
+$faintGrayBorder-3: 1px solid rgba($gray-10, 0.15);
+
+// blue border
+$blueBorder: 1px solid $blue-3;
+
+//green border
+$greenBorder: 1px solid $green-light-2;
+
+// text with opacity
+$faintGrayText-1: rgba($black-2, 0.6);

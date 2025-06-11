@@ -1,0 +1,199 @@
+html, body {
+
+  @include respond-below($small) {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+html {
+  padding-bottom: 0 !important;
+}
+
+body {
+  background: $backgroundOffWhite-2;
+  box-sizing: border-box;
+
+  @include respond-below($small) {
+    max-height: 100vh;
+  }
+
+  &#faq{
+    .promo-carousel__cell a{
+      transform: initial !important;
+    }
+  }
+}
+
+*::selection {
+  background: $gray-5; /* WebKit/Blink Browsers */
+}
+
+*::-moz-selection {
+  background: $gray-5; /* Gecko Browsers */
+}
+
+
+
+#MainContent {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px $white inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  transition: padding $fast-timer $easeInOutQuad;
+  // padding-top: $headerHeightMobile;
+
+  .has-banner & {
+    padding-top: $headerHeightDesktop;
+  }
+
+  @include respond($medium) {
+    // padding-top: $headerHeightDesktop;
+
+    .has-banner & {
+      padding-top: $headerHeightDesktop + $headerBannerHeight;
+    }
+  }
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  font-family: "object-fit: cover";
+  object-fit: contain;
+}
+
+// button,
+// [type="button"],
+// [type="reset"],
+// [type="submit"] {
+//   cursor: pointer;
+//   border: none;
+//   padding: 0;
+//   width: auto;
+//   overflow: visible;
+//   background: transparent;
+
+//   /* inherit font & color from ancestor */
+//   color: inherit;
+
+//   /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+//   line-height: normal;
+
+//   /* Corrects inability to style clickable `input` types in iOS */
+//   -webkit-appearance: none;
+// }
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:focus {
+    color: inherit;
+  }
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: $mobileGutter;
+  transition: transform 0.25s;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.gray {
+  color: $gray-7;
+}
+
+.gray-darker {
+  color: $gray-18;
+}
+
+.background-image-darken {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#241b17+0,241b17+100&0+0,0.2+100 */
+  background: -moz-linear-gradient(top, rgba(36,27,23,0) 0%, rgba(36,27,23,0.2) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(36,27,23,0) 0%,rgba(36,27,23,0.2) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(36,27,23,0) 0%,rgba(36,27,23,0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00241b17', endColorstr='#33241b17',GradientType=0 ); /* IE6-9 */
+}
+
+.loading-spinner {
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.main {
+  padding-top: rem(90);
+  position: relative;
+  z-index: z(forward);
+
+  @include respond-below($medium) {
+    padding-top: rem(60);
+  }
+
+  // .has-banner main
+  .has-banner & {
+    padding-top: rem(120);
+
+    @include respond-below($medium) {
+      padding-top: rem(90);
+    }
+  }
+
+  // .cart-open .main
+  .cart-open & {
+
+    @include respond-below($medium) {
+      overflow: hidden;
+    }
+  }
+}
+
+.skip-link:focus {
+  clip: auto;
+  width: auto;
+  height: auto;
+  color: $black;
+  background-color: $white;
+  padding: rem(10);
+  margin: 0;
+  z-index: 50;
+  transition: none;
+}

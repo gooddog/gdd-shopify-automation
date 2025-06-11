@@ -1,0 +1,89 @@
+/**
+ * Loading
+ *
+ * Lazy load
+ * Lazy load container
+ * Loading animation
+ * Is loading
+ */
+
+/**
+ * Lazy load
+ */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out 2s;
+}
+
+.lazyloaded {
+  // opacity: 1 !important;
+  // transition: opacity 5s ease-in-out 2s
+}
+
+/**
+ * Lazy laod container
+ */
+.loading-container {
+  position: relative;
+
+  &::after {
+    background: $white;
+    bottom: 0;
+    content: ' ';
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all $normal-timer $ease-1;
+    visibility: visible;
+    z-index: 2;
+  }
+
+  // .loading-container--loaded
+  &--loaded {
+
+    &::after {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+/**
+ * Loading animation
+ */
+@keyframes rotating {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/**
+ * Is loading
+ */
+.is-loading {
+  position: relative;
+
+  &::before {
+    content: '';
+    @extend %loading;
+  }
+
+  &.loaded {
+
+    &::before {
+      opacity: 0;
+    }
+
+    img {
+      opacity: 1;
+    }
+  }
+}

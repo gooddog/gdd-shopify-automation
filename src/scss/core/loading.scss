@@ -1,0 +1,29 @@
+/**
+ * Loading
+ * background-image in styles/theme.scss.liquid
+ */
+%loading {
+  animation: rotating $slowest-timer linear infinite;
+  backface-visibility: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: rem(26);
+  content: '';
+  display: block;
+  height: rem(26);
+  left: 50%;
+  margin: rem(-13) 0 0 rem(-13);
+  position: absolute;
+  top: 50%;
+  width: rem(26);
+  z-index: z(loading);
+}
+
+%reset-loading {
+  animation-name: none;
+  background-image: none;
+  height: auto;
+  margin: auto;
+  width: auto;
+  z-index: auto;
+}

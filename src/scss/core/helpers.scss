@@ -1,0 +1,314 @@
+.visually-hidden {
+  position: absolute !important;
+  top: 0;
+  clip: rect(1px,1px,1px,1px) !important;
+  overflow: hidden !important;
+  height: 1px !important;
+  width: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.hideBelowSmall {
+  @include respond-below($small) {
+    display: none !important;
+  }
+}
+
+.hideBelowMedium {
+  @include respond-below($medium) {
+    display: none !important;
+  }
+}
+
+.hideAboveSmall {
+  @include respond($small) {
+    display: none !important;
+  }
+}
+
+.hideAboveMedium {
+  @include respond($medium) {
+    display: none !important;
+  }
+}
+
+.tac {
+  text-align: center;
+}
+
+.hide {
+  display: none !important;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  // .pv-gallery__thumbs::-webkit-scrollbar
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+.list-reset {
+  font-size: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.screenreader {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important; // Makes sure that screenreader CSS isn't overwritten by inheritnace
+  width: 1px;
+}
+
+.plus-minus-icon {
+  position: relative;
+  height: 17px;
+  width: 17px;
+  opacity: .7;
+
+  .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    > div {
+      position: absolute;
+      background-color: $gray-13;
+      height: 1px;
+      width: 1px;
+      transform: rotate(-90deg);
+    }
+
+    .vertical {
+      transition: transform 0.5s ease;
+      height: 13px;
+    }
+
+    .horizontal {
+      transition: transform 0.5s ease, opacity 0.5s;
+      opacity: 1;
+      width: 13px;
+    }
+  }
+
+  .is-open > & {
+    opacity: 1;
+    .vertical {
+      transform: rotate(90deg);
+    }
+    .horizontal {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+  }
+}
+
+.standard__cta.caps--link{
+  padding: 24px 24px 26px;
+  text-transform: capitalize;
+}
+
+.btn-break{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text--dark--green{
+  color: #4F5943;
+}
+
+@media(max-width:992px){
+  .mobile-text--neutral {
+    color: var(--COLOR-TEXT-DARK);
+    p{
+      color: var(--COLOR-TEXT-DARK);
+    }
+  }
+  
+  .mobile-text--black {
+    color: $black;
+    p{
+      color: $black;
+    }
+  }
+  
+  .mobile-text--primary {
+    color: var(--COLOR-PRIMARY);
+    p{
+      color: var(--COLOR-PRIMARY);
+    }
+  }
+  
+  .mobile-text--secondary {
+    color: var(--COLOR-SECONDARY);
+    p{
+      color: var(--COLOR-SECONDARY);
+    }
+  }
+  
+  .mobile-text--white {
+    color: $white;
+    text-shadow: 0 2px 6px rgba(0,0,0,.3);
+    p{
+      text-shadow: 0 2px 6px rgba(0,0,0,.3);
+    }
+  }
+  
+  .mobile-text--invert--primary {
+    color: var(--INVERSE-PRIMARY);
+    p{
+      color: var(--INVERSE-PRIMARY);
+    }
+  }
+  
+  .mobile-text--invert--secondary {
+    color: var(--INVERSE-SECONDARY);
+    p{
+      color: var(--INVERSE-SECONDARY);
+    }
+  }
+  
+  .mobile-text--invert {
+    color: var(--INVERSE-A90);
+    p{
+      color: var(--INVERSE-A90);
+    }
+  }
+  
+  .mobile-text--bright--primary {
+    color: var(--BRIGHT-PRIMARY);
+    p{
+      color: var(--BRIGHT-PRIMARY);
+    }
+  }
+  
+  .mobile-text--bright--secondary {
+    color: var(--BRIGHT-SECONDARY);
+    p{
+      color: var(--BRIGHT-SECONDARY);
+    }
+  }
+  .mobile-text--dark--green{
+    color: #4F5943;
+    p{
+      color: #4F5943;
+    }
+  }
+}
+
+.link-overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: transparent;
+}
+
+.position{
+  &-bottom{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: block;
+    width: fit-content;
+    @media(max-width:768px){
+      bottom: 20px;
+    }
+  }
+  &-bottom-left{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    @media(max-width:768px){
+      bottom: 20px;
+    }
+  }
+  &-bottom-right{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    @media(max-width:768px){
+      bottom: 20px;
+    }
+  }
+}
+
+@media(max-width:992px){
+  .position-mobile{
+    &-bottom{
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      display: block;
+      width: fit-content;
+      @media(max-width:768px){
+        bottom: 20px;
+      }
+    }
+    &-bottom-left{
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      @media(max-width:768px){
+        bottom: 20px;
+      }
+    }
+    &-bottom-right{
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      @media(max-width:768px){
+        bottom: 20px;
+      }
+    }
+  }
+}
+
+.spinner {
+  width: 2em;
+  height: 2em;
+  border: 0.5em solid rgba(0, 0, 0, 0.1);
+  border-left-color: #34402C;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+  margin-top: 64px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.highlight--green{
+  color: $green-light-3;
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
