@@ -24,9 +24,9 @@
         "other": "{{price}} per {{count}} item"
       },
       "per_unit": {
-        "single": "{{price}}/{{unit}}",
-        "one": "{{price}}/{{count}}{{unit}}",
-        "other": "{{price}}/{{count}}{{unit}}"
+        "single": "{{price}}\/{{unit}}",
+        "one": "{{price}}\/{{count}}{{unit}}",
+        "other": "{{price}}\/{{count}}{{unit}}"
       },
       "per_unit_accessibility": {
         "single": "{{price}} per {{unit}}",
@@ -86,7 +86,7 @@
       "other": "{{ count }} filter diterapkan"
     },
     "menu": "Menu",
-    "country_region": "Negara/Wilayah",
+    "country_region": "Negara\/Wilayah",
     "slide_status": "Slide {{ index }} dari {{ length }}",
     "scroll_to": "Gulir ke {{ title }}",
     "loading_product_recommendations": "Memuat rekomendasi produk",
@@ -107,7 +107,7 @@
     "show_filters": "Filter",
     "clear": "Kosongkan",
     "continue_shopping": "Lanjutkan belanja",
-    "log_in_html": "Sudah punya akun? <a href=\"{{ link }}\">Login</a> untuk checkout lebih cepat.",
+    "log_in_html": "Sudah punya akun? <a href=\"{{ link }}\">Login<\/a> untuk checkout lebih cepat.",
     "see_items": {
       "one": "Lihat {{ count }} item",
       "other": "Lihat {{ count }} item"
@@ -153,13 +153,13 @@
     "cart_subtotal": "Subtotal",
     "discounts": "Diskon",
     "discount": "Diskon",
-    "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Termasuk bea cukai dan pajak. Diskon dan <a href=\"{{ link }}\">biaya pengiriman</a> dihitung saat checkout.",
+    "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Termasuk bea cukai dan pajak. Diskon dan <a href=\"{{ link }}\">biaya pengiriman<\/a> dihitung saat checkout.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Termasuk bea cukai dan pajak. Diskon dan biaya pengiriman dihitung saat checkout.",
-    "taxes_included_shipping_at_checkout_with_policy_html": "Termasuk pajak. Diskon dan <a href=\"{{ link }}\">biaya pengiriman</a> dihitung saat checkout.",
+    "taxes_included_shipping_at_checkout_with_policy_html": "Termasuk pajak. Diskon dan <a href=\"{{ link }}\">biaya pengiriman<\/a> dihitung saat checkout.",
     "taxes_included_shipping_at_checkout_without_policy": "Termasuk pajak. Diskon dan biaya pengiriman dihitung saat checkout.",
-    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Termasuk bea cukai. Pajak, diskon, dan <a href=\"{{ link }}\">biaya pengiriman</a> dihitung saat checkout.",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Termasuk bea cukai. Pajak, diskon, dan <a href=\"{{ link }}\">biaya pengiriman<\/a> dihitung saat checkout.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Termasuk bea cukai. Pajak, diskon, dan biaya pengiriman dihitung saat checkout.",
-    "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Pajak, diskon, dan <a href=\"{{ link }}\">biaya pengiriman</a> dihitung saat checkout.",
+    "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Pajak, diskon, dan <a href=\"{{ link }}\">biaya pengiriman<\/a> dihitung saat checkout.",
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Pajak, diskon, dan biaya pengiriman dihitung saat checkout.",
     "checkout": "Check out",
     "cart_title": "Keranjang",
@@ -169,7 +169,7 @@
     "price_sale": "Harga obral",
     "duties_and_taxes_included": "Termasuk bea cukai dan pajak.",
     "duties_included": "Termasuk bea cukai.",
-    "shipping_policy_html": "<a href=\"{{ link }}\">Biaya pengiriman</a> dihitung saat checkout.",
+    "shipping_policy_html": "<a href=\"{{ link }}\">Biaya pengiriman<\/a> dihitung saat checkout.",
     "taxes_included": "Termasuk pajak.",
     "product_badge_sold_out": "Habis",
     "product_badge_sale": "Promo",
@@ -210,13 +210,13 @@
     "search_results_no_results_check_spelling": "Tidak ada hasil yang ditemukan untuk \"{{ terms }}\". Periksa ejaan atau gunakan kata atau frasa yang berbeda.",
     "featured_products": "Produk unggulan",
     "no_products_found": "Tidak ada produk yang ditemukan.",
-    "use_fewer_filters_html": "Coba kurangi filter, atau <a class=\"{{ class }}\" href=\"{{ link }}\">hapus semua filter</a>.",
+    "use_fewer_filters_html": "Coba kurangi filter, atau <a class=\"{{ class }}\" href=\"{{ link }}\">hapus semua filter<\/a>.",
     "filters": "Filter",
     "price_filter": "Harga tertinggi adalah {{ price }}",
     "blog_details_separator": "|",
     "read_more": "Baca selengkapnya...",
     "discount_code": "Kode diskon",
-    "pickup_available_at_html": "Pengambilan dapat dilakukan di <b>{{ location }}</b>",
+    "pickup_available_at_html": "Pengambilan dapat dilakukan di <b>{{ location }}<\/b>",
     "pickup_available_in": "Pengambilan dapat dilakukan pada {{ pickup_time }}",
     "pickup_not_available": "Pengambilan saat ini tidak tersedia",
     "pickup_ready_in": "{{ pickup_time }}",
@@ -229,7 +229,7 @@
     "duties_and_taxes_included_shipping_at_checkout_without_policy_without_discounts": "Termasuk bea cukai dan pajak. Biaya pengiriman dihitung saat checkout.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Termasuk bea cukai. Biaya pengiriman dihitung saat checkout.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Termasuk bea cukai. Biaya pengiriman dihitung saat checkout.",
-    "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Pajak dan <a href=\"{{ link }}\">biaya pengiriman</a> dihitung saat checkout.",
+    "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Pajak dan <a href=\"{{ link }}\">biaya pengiriman<\/a> dihitung saat checkout.",
     "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Pajak dan biaya pengiriman dihitung saat checkout.",
     "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Termasuk pajak. Biaya pengiriman dihitung saat checkout.",
     "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Termasuk pajak. Biaya pengiriman dihitung saat checkout.",
@@ -248,7 +248,7 @@
     "shipping_policy": "Biaya pengiriman dihitung saat checkout.",
     "shipping_discount_error": "Diskon biaya pengiriman akan ditampilkan saat checkout setelah menambahkan alamat",
     "powered_by": "Toko ini didukung oleh",
-    "store_owner_link_html": "Anda pemilik toko? <a href=\"{{ link }}\">Login di sini</a>"
+    "store_owner_link_html": "Anda pemilik toko? <a href=\"{{ link }}\">Login di sini<\/a>"
   },
   "gift_cards": {
     "issued": {

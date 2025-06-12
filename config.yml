@@ -29,7 +29,7 @@ production:
   store: ${PROD_SHOP}
   # directory: views
   ignore_files:
-    - config/settings_data.json
+    # - config/settings_data.json
     - .env
-    - templates/*
-    - locales/*
+    # - templates/*
+    # - locales/*

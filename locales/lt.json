@@ -21,16 +21,16 @@
       "per_item": {
         "single": "{{price}} už kiekvieną",
         "one": "{{price}} už {{count}} prekę",
-        "other": "{{price}} už {{count}} prekę (-es/-ių)",
-        "few": "{{price}} už {{count}} prekę (-es/-ių)",
-        "many": "{{price}} už {{count}} prekę (-es/-ių)"
+        "other": "{{price}} už {{count}} prekę (-es\/-ių)",
+        "few": "{{price}} už {{count}} prekę (-es\/-ių)",
+        "many": "{{price}} už {{count}} prekę (-es\/-ių)"
       },
       "per_unit": {
-        "single": "{{price}}/{{unit}}",
-        "one": "{{price}}/{{count}} {{unit}}",
-        "other": "{{price}}/{{count}} {{unit}}",
-        "few": "{{price}}/{{count}} {{unit}}",
-        "many": "{{price}}/{{count}} {{unit}}"
+        "single": "{{price}}\/{{unit}}",
+        "one": "{{price}}\/{{count}} {{unit}}",
+        "other": "{{price}}\/{{count}} {{unit}}",
+        "few": "{{price}}\/{{count}} {{unit}}",
+        "many": "{{price}}\/{{count}} {{unit}}"
       },
       "per_unit_accessibility": {
         "single": "{{price}} už {{unit}}",
@@ -94,7 +94,7 @@
       "many": "Pritaikyti filtrai: {{ count }}"
     },
     "menu": "Meniu",
-    "country_region": "Šalis / regionas",
+    "country_region": "Šalis \/ regionas",
     "slide_status": "{{ index }} skaidrė iš {{ length }}",
     "scroll_to": "Slinkti į „{{ title }}“",
     "loading_product_recommendations": "Įkeliamos gaminių rekomendacijos",
@@ -115,7 +115,7 @@
     "show_filters": "Filtruoti",
     "clear": "Išvalyti",
     "continue_shopping": "Tęsti apsipirkimą",
-    "log_in_html": "Turite paskyrą? <a href=\"{{ link }}\">Prisijunkite</a> ir atsiskaitysite greičiau.",
+    "log_in_html": "Turite paskyrą? <a href=\"{{ link }}\">Prisijunkite<\/a> ir atsiskaitysite greičiau.",
     "see_items": {
       "one": "Žr. {{ count }} prekę",
       "other": "Žr. {{ count }} prekes(-ių)",
@@ -163,13 +163,13 @@
     "cart_subtotal": "Tarpinė suma",
     "discounts": "Nuolaidos",
     "discount": "Nuolaida",
-    "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Muito ir kiti mokesčiai įtraukti. Nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos</a> apskaičiuojamos atsiskaitant.",
+    "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Muito ir kiti mokesčiai įtraukti. Nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos<\/a> apskaičiuojamos atsiskaitant.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Muito ir kiti mokesčiai įtraukti. Nuolaidos ir siuntimo išlaidos apskaičiuojamos atsiskaitant.",
-    "taxes_included_shipping_at_checkout_with_policy_html": "Mokesčiai įtraukti. Nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos</a> apskaičiuojamos atsiskaitant.",
+    "taxes_included_shipping_at_checkout_with_policy_html": "Mokesčiai įtraukti. Nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos<\/a> apskaičiuojamos atsiskaitant.",
     "taxes_included_shipping_at_checkout_without_policy": "Mokesčiai įtraukti. Nuolaidos ir siuntimo išlaidos apskaičiuojamos atsiskaitant.",
-    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Muito mokesčiai įtraukti. Mokesčiai, nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos</a> apskaičiuojamos atsiskaitant.",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Muito mokesčiai įtraukti. Mokesčiai, nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos<\/a> apskaičiuojamos atsiskaitant.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Muito mokesčiai įtraukti. Mokesčiai, nuolaidos ir siuntimo išlaidos apskaičiuojamos atsiskaitant.",
-    "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Mokesčiai, nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos</a> apskaičiuojamos atsiskaitant.",
+    "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Mokesčiai, nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos<\/a> apskaičiuojamos atsiskaitant.",
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Mokesčiai, nuolaidos ir siuntimo išlaidos apskaičiuojamos atsiskaitant.",
     "checkout": "Atsiskaityti",
     "cart_title": "Krepšelis",
@@ -179,7 +179,7 @@
     "price_sale": "Kaina su nuolaida",
     "duties_and_taxes_included": "Muito ir kiti mokesčiai įtraukti.",
     "duties_included": "Muito mokesčiai įtraukti.",
-    "shipping_policy_html": "<a href=\"{{ link }}\">Siuntimo išlaidos</a> apskaičiuojamos atsiskaitant.",
+    "shipping_policy_html": "<a href=\"{{ link }}\">Siuntimo išlaidos<\/a> apskaičiuojamos atsiskaitant.",
     "taxes_included": "Mokesčiai įtraukti.",
     "product_badge_sold_out": "Išparduota",
     "product_badge_sale": "Išpardavimas",
@@ -224,7 +224,7 @@
     "filters": "Filtrai",
     "no_products_found": "Nerasta jokių gaminių.",
     "price_filter": "Didžiausia kaina yra {{ price }}",
-    "use_fewer_filters_html": "Pabandykite naudoti mažiau filtrų arba <a class=\"{{ class }}\" href=\"{{ link }}\">išvalyti visus filtrus</a>.",
+    "use_fewer_filters_html": "Pabandykite naudoti mažiau filtrų arba <a class=\"{{ class }}\" href=\"{{ link }}\">išvalyti visus filtrus<\/a>.",
     "search": "Ieškoti",
     "search_results_no_results_check_spelling": "Jokių rezultatų pagal užklausą „{{ terms }}“. Patikrinkite rašybą arba vartokite kitą žodį ar frazę.",
     "blog_details_separator": "|",
@@ -238,11 +238,11 @@
     "duties_and_taxes_included_shipping_at_checkout_without_policy_without_discounts": "Muito ir kiti mokesčiai įtraukti. Siuntimo išlaidos apskaičiuojamos atsiskaitant.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Muito mokesčiai įtraukti. Siuntimo išlaidos apskaičiuojamos atsiskaitant.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Muito mokesčiai įtraukti. Siuntimo išlaidos apskaičiuojamos atsiskaitant.",
-    "pickup_available_at_html": "Galima atsiimti <b>{{ location }}</b>",
+    "pickup_available_at_html": "Galima atsiimti <b>{{ location }}<\/b>",
     "pickup_available_in": "Galima atsiimti {{ pickup_time }}",
     "pickup_not_available": "Šiuo metu atsiimti negalima",
     "pickup_ready_in": "{{ pickup_time }}",
-    "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Mokesčiai ir <a href=\"{{ link }}\">siuntimo išlaidos</a> apskaičiuojami atsiskaitant.",
+    "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Mokesčiai ir <a href=\"{{ link }}\">siuntimo išlaidos<\/a> apskaičiuojami atsiskaitant.",
     "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Mokesčiai ir siuntimo išlaidos apskaičiuojami atsiskaitant.",
     "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Mokesčiai įtraukti. Siuntimo išlaidos apskaičiuojamos atsiskaitant.",
     "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Mokesčiai įtraukti. Siuntimo išlaidos apskaičiuojamos atsiskaitant.",
@@ -264,7 +264,7 @@
     "shipping_policy": "Siuntimo išlaidos apskaičiuojamos atsiskaitant.",
     "shipping_discount_error": "Siuntimui taikomos nuolaidos rodomos atsiskaitant, įvedus adresą",
     "powered_by": "Ši parduotuvė bus teikiama per platformą",
-    "store_owner_link_html": "Ar esate parduotuvės savininkas? <a href=\"{{ link }}\">Prisijunkite čia</a>"
+    "store_owner_link_html": "Ar esate parduotuvės savininkas? <a href=\"{{ link }}\">Prisijunkite čia<\/a>"
   },
   "gift_cards": {
     "issued": {
