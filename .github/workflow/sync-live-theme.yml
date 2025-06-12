@@ -1,0 +1,127 @@
+name: Sync Live Theme Changes
+on:
+  schedule:
+    # Run every 4 hours during business days
+    - cron: '0 */4 * * 1-5'
+    # Run hourly during weekends (common promotion times)
+    - cron: '0 * * * 0,6'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      force_sync:
+        description: 'Force sync even if no changes detected'
+        required: false
+        default: 'false'
+
+jobs:
+  sync-live-theme:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install Shopify CLI
+      run: npm install -g @shopify/cli@latest
+    
+    - name: Configure Git
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions Theme Sync"
+    
+    - name: Get current live theme info
+      id: theme-info
+      run: |
+        # Get live theme details
+        THEME_INFO=$(shopify theme list --json)
+        LIVE_THEME_ID=$(echo "$THEME_INFO" | jq -r '.[] | select(.role=="main") | .id')
+        LIVE_THEME_NAME=$(echo "$THEME_INFO" | jq -r '.[] | select(.role=="main") | .name')
+        
+        echo "live_theme_id=$LIVE_THEME_ID" >> $GITHUB_OUTPUT
+        echo "live_theme_name=$LIVE_THEME_NAME" >> $GITHUB_OUTPUT
+        echo "Found live theme: $LIVE_THEME_NAME (ID: $LIVE_THEME_ID)"
+      env:
+        SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE_URL }}
+        SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+    
+    - name: Create sync branch
+      run: |
+        BRANCH_NAME="auto-sync/$(date +%Y-%m-%d-%H%M)"
+        git checkout -b "$BRANCH_NAME"
+        echo "sync_branch=$BRANCH_NAME" >> $GITHUB_ENV
+    
+    - name: Pull live theme
+      run: |
+        echo "Pulling theme ${{ steps.theme-info.outputs.live_theme_id }}..."
+        shopify theme pull --theme=${{ steps.theme-info.outputs.live_theme_id }} --force
+      env:
+        SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE_URL }}
+        SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+    
+    - name: Check for changes
+      id: changes
+      run: |
+        if [[ -n $(git status --porcelain) ]]; then
+          echo "changes_detected=true" >> $GITHUB_OUTPUT
+          echo "Changes detected in live theme"
+          git status --short
+        else
+          echo "changes_detected=false" >> $GITHUB_OUTPUT
+          echo "No changes detected"
+        fi
+    
+    - name: Commit and push changes
+      if: steps.changes.outputs.changes_detected == 'true' || github.event.inputs.force_sync == 'true'
+      run: |
+        git add .
+        git commit -m "Auto-sync: ${{ steps.theme-info.outputs.live_theme_name }} changes $(date '+%Y-%m-%d %H:%M')"
+        git push origin "$sync_branch"
+    
+    - name: Create Pull Request
+      if: steps.changes.outputs.changes_detected == 'true'
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ env.sync_branch }}
+        title: "Auto-sync: Live theme changes from ${{ steps.theme-info.outputs.live_theme_name }}"
+        body: |
+          ## Automatic Theme Sync
+          
+          **Live Theme:** ${{ steps.theme-info.outputs.live_theme_name }}
+          **Theme ID:** ${{ steps.theme-info.outputs.live_theme_id }}
+          **Sync Time:** $(date)
+          
+          This PR contains changes automatically pulled from the currently live Shopify theme.
+          
+          ### Files Changed:
+          - Review the changes carefully before merging
+          - Check if these are promotional changes you want to keep
+          - Consider if any changes should be applied to your base theme
+          
+          **⚠️ Action Required:** Review and merge or close this PR.
+        reviewers: |
+          your-team-lead
+          your-lead-developer
+        labels: |
+          auto-sync
+          needs-review
+    
+    - name: Notify team
+      if: steps.changes.outputs.changes_detected == 'true'
+      run: |
+        curl -X POST -H 'Content-type: application/json' \
+          --data '{
+            "text": "🔄 Auto-sync detected changes in live theme: ${{ steps.theme-info.outputs.live_theme_name }}\nPR created for review: ${{ github.server_url }}/${{ github.repository }}/pulls"
+          }' \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
+      if: env.SLACK_WEBHOOK_URL != ''

@@ -1,0 +1,4 @@
+echo "gdd-shopify-automation/main" > .github/expected-live-theme.txt
+git add .github/expected-live-theme.txt
+git commit -m "Add initial expected theme tracking"
+git push
