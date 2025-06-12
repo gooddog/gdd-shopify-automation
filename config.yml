@@ -32,4 +32,4 @@ production:
     # - config/settings_data.json
     - .env
     # - templates/*
-    # - locales/*
+    - locales/*
