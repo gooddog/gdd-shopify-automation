@@ -6,14 +6,14 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
         "logo_4AeNBU": {
           "type": "logo",
-          "name": "t:names.logo",
           "settings": {
             "inverse": false,
             "font": "accent",
@@ -33,9 +33,8 @@
         },
         "text_iXYWz6": {
           "type": "text",
-          "name": "t:names.text",
           "settings": {
-            "text": "<p>With a focus on quality and design, we curate products that enhance your everyday.</p>",
+            "text": "<p>With a focus on quality and design, we curate products that enhance your everyday. testing</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -62,8 +61,8 @@
         "logo_4AeNBU",
         "text_iXYWz6"
       ],
-      "name": "t:names.hero",
       "settings": {
+        "link": "",
         "open_in_new_tab": false,
         "media_type_1": "image",
         "media_type_2": "image",
@@ -128,7 +127,6 @@
           "blocks": {
             "product_list_text_qLCTNF": {
               "type": "_product-list-text",
-              "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>{{ closest.collection.title }}</h3>",
                 "width": "fit-content",
@@ -154,7 +152,6 @@
             },
             "product_list_button_N8pfAg": {
               "type": "_product-list-button",
-              "name": "t:names.product_list_button",
               "settings": {
                 "label": "View all",
                 "collection": "{{ closest.collection }}",
@@ -175,7 +172,6 @@
         },
         "static-product-card": {
           "type": "product-card",
-          "name": "t:names.product_card",
           "static": true,
           "settings": {
             "product": "{{ closest.product }}",
@@ -194,7 +190,6 @@
           "blocks": {
             "product_card_gallery_JgqDGj": {
               "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
               "settings": {
                 "product": "{{ closest.product }}",
                 "image_ratio": "portrait",
@@ -211,8 +206,8 @@
             },
             "group_7VTJcC": {
               "type": "group",
-              "name": "t:names.group",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -249,7 +244,6 @@
               "blocks": {
                 "product_title_dMgTDL": {
                   "type": "product-title",
-                  "name": "t:names.product_title",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "width": "fit-content",
@@ -275,7 +269,6 @@
                 },
                 "price_h6P4AF": {
                   "type": "price",
-                  "name": "t:names.product_price",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "show_sale_price_first": true,
@@ -299,7 +292,6 @@
                 },
                 "swatches_k9YMgz": {
                   "type": "swatches",
-                  "name": "t:names.swatches",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "product_swatches_alignment": "flex-start",
@@ -326,7 +318,6 @@
           ]
         }
       },
-      "name": "t:names.products_grid",
       "settings": {
         "collection": "all",
         "layout_type": "grid",
