@@ -1,0 +1,85 @@
+name: Emergency Theme Backup
+on:
+  workflow_dispatch:
+    inputs:
+      theme_id:
+        description: 'Theme ID to backup (leave empty for live theme)'
+        required: false
+      backup_name:
+        description: 'Backup name suffix'
+        required: false
+        default: 'emergency'
+
+jobs:
+  backup-theme:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
+    - name: Install Shopify CLI
+      run: npm install -g @shopify/cli@latest
+    
+    - name: Determine theme to backup
+      id: theme-info
+      run: |
+        if [[ -n "${{ github.event.inputs.theme_id }}" ]]; then
+          THEME_ID="${{ github.event.inputs.theme_id }}"
+          THEME_INFO=$(shopify theme list --json | jq -r '.[] | select(.id=="'$THEME_ID'")')
+        else
+          THEME_INFO=$(shopify theme list --json | jq -r '.[] | select(.role=="main")')
+          THEME_ID=$(echo "$THEME_INFO" | jq -r '.id')
+        fi
+        
+        THEME_NAME=$(echo "$THEME_INFO" | jq -r '.name')
+        echo "theme_id=$THEME_ID" >> $GITHUB_OUTPUT
+        echo "theme_name=$THEME_NAME" >> $GITHUB_OUTPUT
+        echo "Backing up theme: $THEME_NAME (ID: $THEME_ID)"
+      env:
+        SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE_URL }}
+        SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+    
+    - name: Create backup
+      run: |
+        BACKUP_DIR="backups/$(date +%Y-%m-%d-%H%M)-${{ github.event.inputs.backup_name }}"
+        mkdir -p "$BACKUP_DIR"
+        
+        shopify theme pull --theme=${{ steps.theme-info.outputs.theme_id }} --path="$BACKUP_DIR"
+        
+        # Create backup metadata
+        cat > "$BACKUP_DIR/backup-info.json" << EOF
+        {
+          "backup_date": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+          "theme_id": "${{ steps.theme-info.outputs.theme_id }}",
+          "theme_name": "${{ steps.theme-info.outputs.theme_name }}",
+          "backup_trigger": "manual",
+          "github_sha": "${{ github.sha }}",
+          "github_run_id": "${{ github.run_id }}"
+        }
+        EOF
+        
+        echo "backup_dir=$BACKUP_DIR" >> $GITHUB_ENV
+      env:
+        SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE_URL }}
+        SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+    
+    - name: Commit backup
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions Backup"
+        git add "$backup_dir"
+        git commit -m "Emergency backup: ${{ steps.theme-info.outputs.theme_name }} ($(date))"
+        git push
+    
+    - name: Create backup artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: theme-backup-${{ github.run_number }}
+        path: ${{ env.backup_dir }}
+        retention-days: 90
