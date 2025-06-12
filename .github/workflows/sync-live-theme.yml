@@ -124,4 +124,3 @@ jobs:
             "text": "🔄 Auto-sync detected changes in live theme: ${{ steps.theme-info.outputs.live_theme_name }}\nPR created for review: ${{ github.server_url }}/${{ github.repository }}/pulls"
           }' \
           ${{ secrets.SLACK_WEBHOOK_URL }}
-      if: env.SLACK_WEBHOOK_URL != ''
