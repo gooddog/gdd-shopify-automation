@@ -116,11 +116,11 @@ jobs:
           auto-sync
           needs-review
     
-    - name: Notify team
-      if: steps.changes.outputs.changes_detected == 'true'
-      run: |
-        curl -X POST -H 'Content-type: application/json' \
-          --data '{
-            "text": "🔄 Auto-sync detected changes in live theme: ${{ steps.theme-info.outputs.live_theme_name }}\nPR created for review: ${{ github.server_url }}/${{ github.repository }}/pulls"
-          }' \
-          ${{ secrets.SLACK_WEBHOOK_URL }}
+    # - name: Notify team
+    #   if: steps.changes.outputs.changes_detected == 'true'
+    #   run: |
+    #     curl -X POST -H 'Content-type: application/json' \
+    #       --data '{
+    #         "text": "🔄 Auto-sync detected changes in live theme: ${{ steps.theme-info.outputs.live_theme_name }}\nPR created for review: ${{ github.server_url }}/${{ github.repository }}/pulls"
+    #       }' \
+    #       ${{ secrets.SLACK_WEBHOOK_URL }}
