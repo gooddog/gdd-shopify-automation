@@ -92,7 +92,7 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Slack notification
-      if: steps.check-theme.outputs.theme_changed == 'true'
+      if: steps.changes.outputs.changes_detected == 'true' && secrets.SLACK_WEBHOOK_URL != ''
       run: |
         curl -X POST -H 'Content-type: application/json' \
           --data '{
@@ -121,4 +121,3 @@ jobs:
             ]
           }' \
           ${{ secrets.SLACK_WEBHOOK_URL }}
-      if: env.SLACK_WEBHOOK_URL != ''
