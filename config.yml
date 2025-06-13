@@ -11,22 +11,22 @@ development:
     - locales/*
 
 # Development environment
-dev:
-  password: ${TEST_PASSWD}
-  theme_id: ${TEST_THEMEID}
-  store: ${TEST_SHOP}
-  directory: views
+prod-a:
+  password: ${PROD_A_PASSWD}
+  theme_id: ${PROD_A_THEMEID}
+  store: ${PROD_A_SHOP}
+  # directory: views
   ignore_files:
-    - config/settings_data.json
+    # - config/settings_data.json
     - .env
-    - templates/*
+    # - templates/*
     - locales/*
 
 # Production environment
-production:
-  password: ${PROD_PASSWD}
-  theme_id: ${PROD_THEMEID}
-  store: ${PROD_SHOP}
+prod-b:
+  password: ${PROD_B_PASSWD}
+  theme_id: ${PROD_B_THEMEID}
+  store: ${PROD_B_SHOP}
   # directory: views
   ignore_files:
     # - config/settings_data.json
