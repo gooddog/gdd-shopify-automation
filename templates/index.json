@@ -32,9 +32,25 @@
           },
           "blocks": {}
         },
+        "jumbo_text_MNg48i": {
+          "type": "jumbo-text",
+          "name": "t:names.jumbo_text",
+          "settings": {
+            "text": "Production A",
+            "font": "heading",
+            "alignment": "left",
+            "line_height": "0.8",
+            "letter_spacing": "-0.03em",
+            "case": "none",
+            "text_effect": "none",
+            "animation_repeat": false
+          },
+          "blocks": {}
+        },
         "text_GBdkeY": {
           "type": "text",
           "name": "t:names.heading",
+          "disabled": true,
           "settings": {
             "text": "<h2>Production A</h2>",
             "width": "100%",
@@ -114,6 +130,7 @@
       },
       "block_order": [
         "logo_4AeNBU",
+        "jumbo_text_MNg48i",
         "text_GBdkeY",
         "text_WkKx4q",
         "text_iXYWz6"
@@ -122,7 +139,7 @@
         "link": "",
         "open_in_new_tab": false,
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/bicycle-event.png",
+        "image_1": "shopify://shop_images/boat-in-the-ocean.jpg",
         "media_type_2": "image",
         "content_direction": "row",
         "vertical_on_mobile": true,
