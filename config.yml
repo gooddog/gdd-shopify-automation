@@ -24,9 +24,9 @@ dev:
 
 # Production environment
 production:
-  password: ${PROD_PASSWD}
-  theme_id: ${PROD_THEMEID}
-  store: ${PROD_SHOP}
+  password: ${PROD_A_PASSWD}
+  theme_id: ${PROD_A_THEMEID}
+  store: ${PROD_A_SHOP}
   # directory: views
   ignore_files:
     # - config/settings_data.json
