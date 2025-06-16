@@ -36,7 +36,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Juliane Moore</h2>",
+            "text": "<h2>Production A</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
